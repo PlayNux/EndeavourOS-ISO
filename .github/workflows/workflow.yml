@@ -17,7 +17,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: arch-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,5 +31,21 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+         apt update
+         apt install build-essential
+         mkdir ~/pacman_source
+
+         cd ~/pacman_source
+
+         wget https://archive.archlinux.org/packages/p/pacman/pacman-2.0.tar.gz       
+         tar -xzf pacman-2.0.tar.gz
+         cd pacman-2.0
+         meson build
+         ninja -C build
+         ninja -C build install
+         ./configure
+         make
+         sudo make install
+         sudo pacman -S archiso mkinitcpio-archiso git squashfs-tools --needed
          ./prepare.sh
          sudo ./mkarchiso -v "." 2>&1 | tee "eosiso_$(date -u +'%Y.%m.%d-%H:%M').log"
