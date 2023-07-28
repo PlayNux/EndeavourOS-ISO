@@ -10,7 +10,7 @@
 _set_liveuser_PS1() {
     PS1='[\u@\h \W]\$ '
     if [ "$(whoami)" = "liveuser" ] ; then
-        local iso_version="$(grep ^VERSION= /usr/lib/endeavouros-release 2>/dev/null | cut -d '=' -f 2)"
+        local iso_version="$(grep ^VERSION= /usr/lib/playnux-release 2>/dev/null | cut -d '=' -f 2)"
         if [ -n "$iso_version" ] ; then
             local prefix="eos-"
             local iso_info="$prefix$iso_version"
@@ -22,7 +22,7 @@ _set_liveuser_PS1
 unset -f _set_liveuser_PS1
 
 ShowInstallerIsoInfo() {
-    local file=/usr/lib/endeavouros-release
+    local file=/usr/lib/playnux-release
     if [ -r $file ] ; then
         cat $file
     else

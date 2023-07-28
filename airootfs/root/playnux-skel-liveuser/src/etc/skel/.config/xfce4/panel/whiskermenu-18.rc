@@ -1,7 +1,7 @@
 favorites=eos-log-tool.desktop,gparted.desktop,calamares.desktop,thunar.desktop,xfce4-terminal.desktop,org.xfce.ristretto.desktop,firefox.desktop,org.xfce.Parole.desktop,xfce4-screenshooter.desktop,galculator.desktop,xfce4-taskmanager.desktop,grsync.desktop
 recent=
-button-title=\ EndeavourOS\ \ 
-button-icon=endeavouros-icon
+button-title=\ PlayNux\ \ 
+button-icon=playnux-icon
 button-single-row=false
 show-button-title=true
 show-button-icon=true
@@ -88,13 +88,13 @@ command=exo-open \\0
 regex=true
 
 [action6]
-name=EndeavourOS Forum
+name=PlayNux Forum
 pattern=forum
-command=exo-open --launch WebBrowser https://forum.endeavouros.com
+command=exo-open --launch WebBrowser https://www.reddit.com/r/PlayNux/
 regex=false
 
 [action7]
-name=EndeavourOS Installer
+name=PlayNux Installer
 pattern=install
 command=exo-open welcome
 regex=false

@@ -1,11 +1,11 @@
 # Maintainer: EndeavourOS <info@endeavouros.com>
 
-pkgname='endeavouros-skel-liveuser'
+pkgname='playnux-skel-liveuser'
 pkgver=1.0
 pkgrel=1
-pkgdesc='Liveuser specific skel setup for EndeavourOS'
+pkgdesc='Liveuser specific skel setup for PlayNux'
 arch=('any')
-url='https://www.endeavouros.com'
+url='https://playnux.tawhidbinomar.repl.co/'
 license=('GPL3')
 source=()
 

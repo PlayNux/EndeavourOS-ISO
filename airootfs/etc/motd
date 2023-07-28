@@ -1,27 +1,24 @@
-This ISO is based on Arch-ISO modified hugely to provide Installation Environment for EndeavourOS.
-https://endeavouros.com
+This ISO is based on EndeavourISO modified hugely to provide Installation Environment for Playnux.
+https://playnux.tawhidbinomar.repl.co/
 
-EndeavourOS-archiso Sources: 
-https://github.com/endeavouros-team/EndeavourOS-ISO
+PlayNux-archiso Sources: 
+https://github.com/PlayNux/EndeavourOS-ISO
 
 Arch-ISO Source: 
 https://gitlab.archlinux.org/archlinux/archiso
 
-Calamares as our installer:
+Calamares as installer:
 https://github.com/calamares/calamares
 
-Live environment will start now and let you install EndeavourOS to disk, or tryout XFCE4-Desktop from Live-Session.
+Live environment will start now and let you install PlayNux to disk, or tryout XFCE4-Desktop from Live-Session.
 
 Bugs can be reported here:
-https://forum.endeavouros.com/c/Arch-based-related-questions/bug-reports
+https://github.com/PlayNux/playnux
 
-Getting help at the forum: https://forum.endeavouros.com
-Help-Chat is available on telegram: https://t.me/Endeavouros/
-News at twitter: https://twitter.com/OsEndeavour
-Help and talk at reddit: https://www.reddit.com/r/EndeavourOS/
+Getting help and News at Reddit: https://reddit.com/PlayNux
 
 Our journey wouldn't be made possible without the generosity of our open collective community:
-https://opencollective.com/endeavouros
+https://patreon.com/Dumboprogrammer
 
 Thank you for donating your trust in us!
 

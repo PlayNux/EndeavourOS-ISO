@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Encoding=UTF-8
-Name=EndeavourOS log tool
+Name=PlayNux log tool
 Comment=Log tool to send selected system logs to the internet
 Exec=/usr/bin/eos-log-tool
 Icon=preferences-system-network-server-share

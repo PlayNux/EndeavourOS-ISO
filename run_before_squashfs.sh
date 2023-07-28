@@ -31,7 +31,7 @@ pacman-key --populate archlinux endeavouros
 pacman -Syy
 
 # Install liveuser skel (in case of conflicts use overwrite)
-pacman -U --noconfirm --overwrite "/etc/skel/.bash_profile","/etc/skel/.bashrc" -- "/root/endeavouros-skel-liveuser/"*".pkg.tar.zst"
+pacman -U --noconfirm --overwrite "/etc/skel/.bash_profile","/etc/skel/.bashrc" -- "/root/playnux-skel-liveuser/"*".pkg.tar.zst"
 
 # Prepare livesession settings and user
 sed -i 's/#\(en_US\.UTF-8\)/\1/' "/etc/locale.gen"
@@ -45,15 +45,15 @@ usermod -s /usr/bin/bash root
 useradd -m -p "" -g 'liveuser' -G 'sys,rfkill,wheel,uucp,nopasswdlogin,adm,tty' -s /bin/bash liveuser
 
 # Remove liveuser skel to then install user skel
-pacman -Rns --noconfirm -- "endeavouros-skel-liveuser"
-rm -rf "/root/endeavouros-skel-liveuser"
+pacman -Rns --noconfirm -- "playnux-skel-liveuser"
+rm -rf "/root/playnux-skel-liveuser"
 
 # Root qt style for Calamares
 mkdir "/root/.config"
 cp -Rf "/home/liveuser/.config/"{"Kvantum","qt5ct"} "/root/.config/"
 
 # Add builddate to motd:
-cat "/usr/lib/endeavouros-release" >> "/etc/motd"
+cat "/usr/lib/playnux-release" >> "/etc/motd"
 echo "------------------" >> "/etc/motd"
 
 # Enable systemd services
@@ -67,12 +67,12 @@ pacman -U --noconfirm -- "/root/packages/"*".pkg.tar.zst"
 rm -rf "/root/packages/"
 
 # Set wallpaper for live-session and original for installed system
-mv "endeavouros-wallpaper.png" "/etc/calamares/files/endeavouros-wallpaper.png"
-mv "/root/livewall.png" "/usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png"
-chmod 644 "/usr/share/endeavouros/backgrounds/"*".png"
+mv "playnux-wallpaper.png" "/etc/calamares/files/playnux-wallpaper.png"
+mv "/root/livewall.png" "/usr/share/playnux/backgrounds/playnux-wallpaper.png"
+chmod 644 "/usr/share/playnux/backgrounds/"*".png"
 #test to use the new xfce4-desktop.xml file
 #rm -rf "/usr/share/backgrounds/xfce/xfce-verticals.png"
-#ln -s "/usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png" "/usr/share/backgrounds/xfce/xfce-verticals.png"
+#ln -s "/usr/share/playnux/backgrounds/playnux-wallpaper.png" "/usr/share/backgrounds/xfce/xfce-verticals.png"
 
 
 # TEMPORARY CUSTOM FIXES
